@@ -71,7 +71,7 @@ export default function SubmitReviewPage() {
               <div className="doc p-3"><div className="mb-2 flex items-center justify-between"><span className="label">Redline preview</span><StatusChip status={selected.status} kind="clause" /></div><RedlineBoard oldText={selected.oldClauseText} newText={selected.newClauseText} tone={toneOf()} riskTags={[]} height={240} /></div>
               <div className="doc space-y-1 p-4">
                 <div className="serif text-sm font-semibold">{selected.title}</div>
-                <div className="text-xs text-muted">{selected.documentType} · {selected.jurisdictionLabel}</div>
+                <div className="text-xs text-muted">{selected.documentType} | {selected.jurisdictionLabel}</div>
                 <div className="label mt-2">Rubric</div>
                 <ul className="list-disc space-y-0.5 pl-4 text-xs text-muted">{selected.reviewRubric.slice(0, 6).map((x, i) => <li key={i}>{x}</li>)}</ul>
               </div>

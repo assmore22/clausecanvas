@@ -51,7 +51,7 @@ export default function DisputesPage() {
         <div className="space-y-3">
           {challenges.data!.map((c) => (
             <div key={c.challengeId} className="doc space-y-2 p-4">
-              <div className="flex items-center justify-between"><span className="text-sm font-semibold">Challenge #{c.challengeId} <span className="font-normal text-muted">· clause set #{c.clauseSetId} · review #{c.reviewId}</span></span><StatusChip status={c.status} kind="decision" /></div>
+              <div className="flex items-center justify-between"><span className="text-sm font-semibold">Challenge #{c.challengeId} <span className="font-normal text-muted">| clause set #{c.clauseSetId} | review #{c.reviewId}</span></span><StatusChip status={c.status} kind="decision" /></div>
               <p className="text-sm text-muted">{c.reason}</p>
               {c.evidenceUrls.length > 0 && <div className="flex flex-wrap gap-2 text-xs">{c.evidenceUrls.map((u) => <ExtLink key={u} href={u}>{hostOf(u)}</ExtLink>)}</div>}
               <div className="flex items-center justify-between border-t border-line pt-2 text-xs text-muted">
@@ -68,7 +68,7 @@ export default function DisputesPage() {
         <div className="space-y-3">
           {appeals.data!.map((a) => (
             <div key={a.appealId} className="doc space-y-2 p-4">
-              <div className="flex items-center justify-between"><span className="text-sm font-semibold">Appeal #{a.appealId} <span className="font-normal text-muted">· clause set #{a.clauseSetId} · review #{a.reviewId}</span></span><StatusChip status={a.status} kind="decision" /></div>
+              <div className="flex items-center justify-between"><span className="text-sm font-semibold">Appeal #{a.appealId} <span className="font-normal text-muted">| clause set #{a.clauseSetId} | review #{a.reviewId}</span></span><StatusChip status={a.status} kind="decision" /></div>
               <p className="text-sm text-muted">{a.reason}</p>
               {a.evidenceUrls.length > 0 && <div className="flex flex-wrap gap-2 text-xs">{a.evidenceUrls.map((u) => <ExtLink key={u} href={u}>{hostOf(u)}</ExtLink>)}</div>}
               <div className="flex items-center justify-between border-t border-line pt-2 text-xs text-muted">

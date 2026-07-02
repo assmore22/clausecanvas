@@ -54,8 +54,8 @@ export function VerdictBadge({ verdict, risk, clarity }: { verdict?: string; ris
   return (
     <span className={`chip ${cls}`}>
       {(verdict || "unreviewed").replace(/_/g, " ")}
-      {typeof risk === "number" && risk > 0 ? <span className="mono opacity-80">· risk {risk}</span> : null}
-      {typeof clarity === "number" && clarity > 0 ? <span className="mono opacity-80">· clr {clarity}</span> : null}
+      {typeof risk === "number" && risk > 0 ? <span className="mono opacity-80">| risk {risk}</span> : null}
+      {typeof clarity === "number" && clarity > 0 ? <span className="mono opacity-80">| clr {clarity}</span> : null}
     </span>
   );
 }

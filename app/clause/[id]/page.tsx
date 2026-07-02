@@ -49,7 +49,7 @@ export default function ClauseDetailPage() {
         <>
           <div className="flex flex-wrap items-start justify-between gap-3">
             <div>
-              <div className="label flex items-center gap-2"><FontAwesomeIcon icon={faPenRuler} /> Clause set #{c.clauseSetId} · {c.documentType}</div>
+              <div className="label flex items-center gap-2"><FontAwesomeIcon icon={faPenRuler} /> Clause set #{c.clauseSetId} | {c.documentType}</div>
               <h1 className="mt-1 serif text-2xl font-semibold tracking-tight">{c.title}</h1>
               <div className="mt-1 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted">
                 <span>Owner <Hex value={c.owner} /></span>

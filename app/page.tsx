@@ -114,7 +114,7 @@ export default function WorkspacePage() {
       {/* bottom audit strip */}
       <section className="doc">
         <div className="flex items-center justify-between border-b border-line px-3 py-2">
-          <span className="label">Audit strip{cs ? ` · clause set #${cs.clauseSetId}` : ""}</span>
+          <span className="label">Audit strip{cs ? ` | clause set #${cs.clauseSetId}` : ""}</span>
           <button type="button" className="btn btn-ghost btn-xs" onClick={() => { audit.reload(); reviews.reload(); sets.reload(); stats.reload(); }}><FontAwesomeIcon icon={faRotateRight} className={`h-3 w-3 ${audit.loading ? "animate-spin" : ""}`} /> Refresh</button>
         </div>
         {audit.loading && !audit.data ? <div className="p-3"><RedactedLines rows={2} /></div> : <AuditStrip records={audit.data ?? []} />}
